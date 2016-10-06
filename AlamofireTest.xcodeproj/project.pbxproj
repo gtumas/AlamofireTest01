@@ -13,6 +13,9 @@
 		6C2A7F4A1DA66F1D0070BE7F /* AlamofireTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C2A7F481DA66F1D0070BE7F /* AlamofireTest.xcdatamodeld */; };
 		6C2A7F4C1DA66F1D0070BE7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C2A7F4B1DA66F1D0070BE7F /* Assets.xcassets */; };
 		6C2A7F4F1DA66F1D0070BE7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C2A7F4D1DA66F1D0070BE7F /* LaunchScreen.storyboard */; };
+		6C9EEFFC1DA695DC00629FC5 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 6C9EEFFB1DA695DC00629FC5 /* Cartfile */; };
+		6C9EF0001DA6A5F500629FC5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9EEFFE1DA6A5F500629FC5 /* Alamofire.framework */; };
+		6C9EF0011DA6A5F500629FC5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9EEFFF1DA6A5F500629FC5 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6C2A7F4B1DA66F1D0070BE7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C2A7F4E1DA66F1D0070BE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C2A7F501DA66F1D0070BE7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C9EEFFB1DA695DC00629FC5 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		6C9EEFFE1DA6A5F500629FC5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		6C9EEFFF1DA6A5F500629FC5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C9EF0001DA6A5F500629FC5 /* Alamofire.framework in Frameworks */,
+				6C9EF0011DA6A5F500629FC5 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 			children = (
 				6C2A7F401DA66F1D0070BE7F /* AlamofireTest */,
 				6C2A7F3F1DA66F1D0070BE7F /* Products */,
+				6C9EEFFD1DA6A5F400629FC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +70,20 @@
 				6C2A7F451DA66F1D0070BE7F /* Main.storyboard */,
 				6C2A7F4B1DA66F1D0070BE7F /* Assets.xcassets */,
 				6C2A7F4D1DA66F1D0070BE7F /* LaunchScreen.storyboard */,
+				6C9EEFFB1DA695DC00629FC5 /* Cartfile */,
 				6C2A7F501DA66F1D0070BE7F /* Info.plist */,
 				6C2A7F481DA66F1D0070BE7F /* AlamofireTest.xcdatamodeld */,
 			);
 			path = AlamofireTest;
+			sourceTree = "<group>";
+		};
+		6C9EEFFD1DA6A5F400629FC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C9EEFFE1DA6A5F500629FC5 /* Alamofire.framework */,
+				6C9EEFFF1DA6A5F500629FC5 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +147,7 @@
 			files = (
 				6C2A7F4F1DA66F1D0070BE7F /* LaunchScreen.storyboard in Resources */,
 				6C2A7F4C1DA66F1D0070BE7F /* Assets.xcassets in Resources */,
+				6C9EEFFC1DA695DC00629FC5 /* Cartfile in Resources */,
 				6C2A7F471DA66F1D0070BE7F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +284,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlamofireTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.mediapark.AlamofireTest;
@@ -276,6 +300,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlamofireTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lt.mediapark.AlamofireTest;
@@ -303,6 +331,7 @@
 				6C2A7F551DA66F1D0070BE7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
